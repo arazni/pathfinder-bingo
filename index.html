@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Pathfinder Godsrain Prophecy Bingo</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="bingo.css"/>
+  </head>
+  <body>
+    <h1>Pathfinder Godsrain Prophecy Bingo</h1>
+    <h2>A whole god is dying!<br>Arazni is becoming core!<br>Grab a bingo card to celebrate.</h2>
+    <div class="intro">
+      <p>Paizo is going to announce 10 safe gods, one each Wednesday, on their blog in the form of Godsrain Prophecies.</p>
+      <h3>Safe God Bingo:</h3>
+      <p>As each god is announced to be safe, mark them safe on your bingo card with a circle using an image editor of your choice.</p>
+      <ul>
+        <li>Earn 1 point for every 4-in-a-row you get horizontally.</li>
+        <li>Earn 1 point for every 5-in-a-row you get vertically.</li>
+        <li>Earn bonus points for getting a bingo early.</li>
+      </ul>
+      <h4>Bonus Points</h4>
+      <p>The first time you earn a point, earn bonus points equal to 10 minus the number of gods announced safe at the time you earned your bingo.</p>
+      <p>That is, if your first bingo is on week 4, you earn 6 bonus points. (Week 5 is worth 5, week 6 is worth 4, week 7 is worth 3, week 8 is worth 2, and week 9 is worth 1 bonus point.)</p>
+      <h3>Dead God Doubler:</h3>
+      <p>Of course, guessing which god is going to follow in Aroden's footsteps is the most fun part.</p>
+      <p>Select a god you think will die. They will be marked with an X.</p>
+      <p>If you guess correctly:</p>
+      <ul>
+        <li>Earn 1 point.</li>
+        <li>Then double all of your points.</li>
+      </ul>
+      <p>Good luck!</p>
+      <p>PS: I'm just an Arazni fan who subscribes to Pathfinder 2e rulebooks and lore books, not working with Paizo.</p>
+      <p class="screen-reader-only">Screen reader users: Please raise screen reader accessibility issues with me; I have tested with NVDA on Edge and Firefox on Windows but I'm sighted. (This site is ugly and bare bones but I'll fix it for you.)</p>
+      <p class="screen-reader-only">Also, the canvas with the image will appear at the very bottom of the page after the Generate Your Card button is used.</p>
+    </div>
+    <div class="safe-gods">
+      <h3>Some gods have been marked safe already:</h3>
+      <ul>
+        <li>Pharasma, the Lady of Graves.</li>
+      </ul>
+    </div>
+    <div class="select-a-god">
+      <label id="god-selection-label">Your Dead God Guess:</label>
+      <select title="select a god" id="god-selection" aria-labelledby="god-selection-label">
+        <option value=""></option>
+        <option value="Abadar">Abadar</option>
+        <option value="Asmodeus">Asmodeus</option>
+        <option value="Calistria">Calistria</option>
+        <option value="Cayden">Cayden</option>
+        <option value="Desna">Desna</option>
+        <option value="Erastil">Erastil</option>
+        <option value="Gorum">Gorum</option>
+        <option value="Gozreh">Gozreh</option>
+        <option value="Iomedae">Iomedae</option>
+        <option value="Irori">Irori</option>
+        <option value="Lamashtu">Lamashtu</option>
+        <option value="Nethys">Nethys</option>
+        <option value="Norgorber">Norgorber</option>
+        <option disabled value="Pharasma">Pharasma</option>
+        <option value="Rovagug">Rovagug</option>
+        <option value="Sarenrae">Sarenrae</option>
+        <option value="Shelyn">Shelyn</option>
+        <option value="Torag">Torag</option>
+        <option value="Urgathoa">Urgathoa</option>
+        <option value="Zon-Kuthon">Zon-Kuthon</option>
+      </select>
+      <button type="button" disabled id="generate-bingo">Generate Your Card</button>
+      <!-- <strong id="generate-bingo-error" class="dn">You must select a god first!</strong> -->
+      <button type="button" disabled id="download-bingo">Download Your Card</button>
+      <button type="button" disabled id="copy-description">Copy Card Image Description</button>
+      <p id="copied-success" class="dn">Copied!</p>
+    </div>
+    <div class="canvases">
+      <canvas id="canvas-original" width="1301" height="2001" class="dn"></canvas>
+      <canvas id="canvas-bingo" width="1301" height="2001" class="dn"></canvas>
+    </div>
+    <script src="bingo.js"></script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+.dn {
+  display: none;
+}
+
+.canvases {
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+ul {
+  padding-inline-start: 20px;
+}
+
+li {
+  margin-top: 5px;
+}
+
+canvas {
+  width: 100%;
+  height: auto;
+}
+
+/* https://webaim.org/techniques/css/invisiblecontent/ */
+.screen-reader-only {
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
+
+.select-a-god {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  max-width: 250px;
+}
