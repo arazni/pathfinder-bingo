@@ -26,6 +26,25 @@ const tileDimensions = {
 }
 // const strongGenerateBingoError = document.getElementById("generate-bingo-error");
 
+// firefox seems to need this function
+function reset() {
+  selectGod.value = "";
+  selectGod.disabled = false;
+  buttonGenerateBingo.disabled = true;
+  buttonDownloadBingo.disabled = true;
+  buttonCopyImageDescription.disabled = true;
+}
+
+function cleanup() {
+  selectGod.disabled = true;
+  buttonGenerateBingo.disabled = true;
+  buttonDownloadBingo.disabled = false;
+  buttonCopyImageDescription.disabled = false;
+  canvasBingoElement.classList.remove("dn");
+}
+
+reset();
+
 function randomizeGods(gods) {
   return gods.map(god => [Math.random(), god]).sort().map(([_, god]) => god);
 }
@@ -133,14 +152,6 @@ function markTime(stamp) {
   canvasBingo.strokeText(stamp, 5, 5);
 }
 
-function cleanup() {
-  selectGod.disabled = true;
-  buttonGenerateBingo.disabled = true;
-  buttonDownloadBingo.disabled = false;
-  buttonCopyImageDescription.disabled = false;
-  canvasBingoElement.classList.remove("dn");
-}
-
 // Doesn't seem to download any image description with it
 function downloadBingo() {
   let dataUrl = canvasBingoElement.toDataURL("image/png");
@@ -175,7 +186,7 @@ function setupCanvas(gods, pickedGod, safeGods) {
   original.alt = generateAltText(gods, pickedGod, safeGods);
 }
 
-selectGod.addEventListener("click", () => {
+selectGod.addEventListener("change", () => {
   const god = selectGod.value;
   if (god) {
     buttonGenerateBingo.disabled = false;
