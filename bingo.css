@@ -17,6 +17,7 @@ li {
 
 canvas {
   width: 100%;
+  max-width: 1301px;
   height: auto;
 }
 
