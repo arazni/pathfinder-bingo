@@ -3,3 +3,5 @@ A bingo card generator for the Pathfinder Godsrain Prophecies event. Take a bing
 Please do not raise issues regarding the site's bare bones ugliness, I will not fix them. You can make a PR though.
 
 Please do raise issues if something is inaccessible on your screen reader. I tested with NVDA on Windows on Firefox and Edge.
+
+I don't work for Paizo, I just spend hundreds of dollars on their books.
