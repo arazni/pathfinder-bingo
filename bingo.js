@@ -9,7 +9,7 @@ const imageName = "Prophecy.png";
 const arazniIcon = "Arazni.png";
 const allGods = ["Abadar","Asmodeus","Calistria","Cayden","Desna","Erastil","Gorum","Gozreh","Iomedae","Irori","Lamashtu","Nethys","Norgorber","Pharasma","Rovagug","Sarenrae","Shelyn","Torag","Urgathoa","Zon-Kuthon"];
 const originalTileGods = ["Erastil", "Iomedae", "Torag", "Sarenrae", "Shelyn", "Cayden", "Desna", "Abadar", "Irori", "Gozreh", "Nethys", "Pharasma", "Calistria", "Gorum", "Asmodeus", "Zon-Kuthon", "Norgorber", "Urgathoa", "Lamashtu", "Rovagug"];
-const safeGods = ["Pharasma", "Asmodeus", "Cayden", "Urgathoa", "Erastil"];
+const safeGods = ["Pharasma", "Asmodeus", "Cayden", "Urgathoa", "Erastil", "Nethys"];
 const rawWidth = 1301;
 const rawHeight = 2001;
 const borderColor = "#ED453A";
@@ -73,7 +73,7 @@ function generateAltText(gods, pickedGod, safeGods, stamp) {
   + ` The third row has ${gods[8]}, ${gods[9]}, ${gods[10]}, and ${gods[11]}.`
   + ` The fourth row has ${gods[12]}, ${gods[13]}, ${gods[14]}, and ${gods[15]}.`
   + ` The final row has ${gods[16]}, ${gods[17]}, ${gods[18]}, and ${gods[19]}.`
-  + ` ${safeGods[0]}, ${safeGods[1]}, ${safeGods[2]}, ${safeGods[3]}, and ${safeGods[4]} are already marked safe with a circle.`
+  + ` ${safeGods[0]}, ${safeGods[1]}, ${safeGods[2]}, ${safeGods[3]}, ${safeGods[4]}, and ${safeGods[5]} are already marked safe with a circle.`
   + ` ${pickedGod} is marked with an X as the god you think will die.`
   + ` It is dated ${stamp}.`;
 }
